@@ -10,8 +10,27 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 body {
     background: #fafafa;
     font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    color: #333;
+    color: #212121;
+    background-color:#B6B6B6;
+}
+.blue{
+  background-color: #B2EBF2;
+}
+.centeredInput{
+  margin: auto;
+  text-align: center;
+  width: 40%;
+}
+.containerBlock{
+  width:70%;
+  margin: auto;
+  text-align: center;
 }
 #mail{
-  width: 70%;
+  text-align: center;
+  margin: auto;
+  margin-top: 16%;
+}
+#about{
+  height: 100%;
 }

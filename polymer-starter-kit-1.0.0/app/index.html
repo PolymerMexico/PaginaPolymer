@@ -46,6 +46,9 @@
   <link rel="import" href="bower_components/paper-tabs/paper-tab.html">
   <link rel="import" href="bower_components/paper-input/paper-input.html">
   <link rel="import" href="bower_components/paper-tabs/paper-tabs.html">
+  <link rel="import" href="bower_components/iron-pages/iron-pages.html">
+  <link rel="import" href="bower_components/">
+
   <!-- endreplace-->
 
 
@@ -55,7 +58,7 @@
   <template is="dom-bind" id="app">
     <paper-drawer-panel id="paperDrawerPanel" forceNarrow>
       <paper-header-panel main mode="waterfall-tall">
-        <paper-tabs selected = "0">
+        <paper-tabs selected = "{{selected}}" class = "blue">
           <paper-tab>Suscribete</paper-tab>
           <paper-tab>Meetups futuros</paper-tab>
           <paper-tab>¿Quienes somos?</paper-tab>
@@ -63,9 +66,33 @@
           <paper-tab>Fotos de meetups</paper-tab>
         </paper-tabs>
 
-        <div id = "mail">
-          <paper-input label = "Pon tu mail aqui"></paper-input>
-        </div>
+        <iron-pages selected="{{selected}}">
+          <div>
+            <div id = "mail">
+              <h2>Suscribete al boletín</h2>
+              <paper-input label = "Pon tu mail aqui" class = "centeredInput"></paper-input>
+            </div>
+          </div>
+
+          <div>
+            <google-calendar-list title = "Polymer este mes"></google-calendar-list>
+          </div>
+          <div id = "about">
+            <div class = "containerBlock">
+              <h2>¿Quienes somos?</h2>
+              <p>GDG Polymer México es una comunidad con aproximadamente 450
+                miembros, que hacemos reuniones mensuales en las cuales hemos
+                tenido una audiencia de hasta 80 personas por evento, aparte de
+                eso estamos organizando un gran evento en agosto en el cual
+                estamos esperando a más de 350 personas</p>
+                <h3>¿Qué es Polymer?</h3>
+                <p>Polymer es una librería de google</p>
+            </div>
+          </div>
+          <div>f</div>
+          <div>losj</div>
+        </iron-pages>
+
 
       </paper-header-panel>
     </paper-drawer-panel>
@@ -87,6 +114,13 @@
   </template>
 
   <script src="scripts/app.js"></script>
+  <script>
+    document.addEventListener('click', function(e) {
+      var pages = document.querySelector('iron-pages');
+      //pages.selectNext();
+    });
+  </script>
 </body>
+
 
 </html>
