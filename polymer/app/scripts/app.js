@@ -1,4 +1,5 @@
 (function (document) {
+  var myFirebaseRef = new Firebase("https://scorching-inferno-8867.firebaseio.com/");
   'use strict';
   var app = document.querySelector('#app');
 
