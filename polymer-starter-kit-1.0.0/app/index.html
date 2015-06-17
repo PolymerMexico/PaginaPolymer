@@ -7,6 +7,7 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="Polymer Starter Kit" />
+  <script src="https://cdn.firebase.com/js/client/2.2.7/firebase.js"></script>
   <title>Polymer México</title>
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
@@ -56,7 +57,7 @@
 
 <body unresolved class="fullbleed layout vertical">
   <template is="dom-bind" id="app">
-    <!--<paper-drawer-panel id="paperDrawerPanel" forceNarrow>-->
+    <paper-drawer-panel id="paperDrawerPanel" forceNarrow>
       <paper-header-panel main mode="waterfall-tall">
         <paper-tabs selected = "{{selected}}" class = "blue">
           <paper-tab>Suscribete</paper-tab>
@@ -87,21 +88,34 @@
                 estamos esperando a más de 350 personas</p>
                 <h3>¿Qué es Polymer?</h3>
                 <p>Polymer es una librería de google</p>
+                <h3>Mentores:</h3>
+                <ul class = "listInLine names">
+                  <li>Victor Borja</li>
+                  <li>Angel Barrera</li>
+                  <li>Josue </li>
+                </ul>
+
+                <ul  class = "listInLine">
+                  <li> <img class = "circular" src="images/Vic.jpg" alt=""> </li>
+                  <li><img class = "circular" src="images/Angel.jpg" alt=""></li>
+                  <li><img class = "circular" src="images/Daniel.jpg" alt=""></li>
+                  <li><img class = "circular" src="images/Amet.jpg" alt=""></li>
+                </ul>
 
                 <h3>Organizadores:</h3>
 
                 <ul  class = "listInLine">
-                  <li> <img class = "circular" src="images/Margot.jpg" alt="">Margot Duek</li>
-                  <li><img class = "circular" src="images/Diego.jpg" alt="">Diego De Granda</li>
-                  <li><img class = "circular" src="images/Daniel.jpg" alt="">Daniel Rodriguez</li>
-                  <li><img class = "circular" src="images/Amet.jpg" alt="">Amet Alvirde</li>
-                </ul>
-
-                <ul  class = "listInLine">
-                  <li> <img class = "circular" src="images/Vic.jpg" alt="">Victor Borja</li>
-                  <li><img class = "circular" src="images/Angel.jpg" alt="">Josue </li>
+                  <li> <img class = "circular" src="images/Margot.jpg" alt=""> </li>
+                  <li><img class = "circular" src="images/Diego.jpg" alt=""></li>
                   <li><img class = "circular" src="images/Daniel.jpg" alt=""></li>
                   <li><img class = "circular" src="images/Amet.jpg" alt=""></li>
+                </ul>
+
+                <ul  class = "listInLine names">
+                  <li>Margot Duek</li>
+                  <li>Diego De Granda</li>
+                  <li>Daniel Rodriguez</li>
+                  <li>Amet Alvirde</li>
                 </ul>
             </div>
           </div>
@@ -111,7 +125,7 @@
 
 
       </paper-header-panel>
-    <!--</paper-drawer-panel>-->
+    </paper-drawer-panel>
 
     <paper-toast id="caching-complete"
                  duration="6000"
@@ -130,7 +144,7 @@
   </template>
 
   <script src="scripts/app.js"></script>
-
+  <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
 </body>
 
 
